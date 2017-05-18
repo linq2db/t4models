@@ -70,7 +70,7 @@ void LoadServerMetadata(DataConnection dataConnection)
 	DataContextObject.Comment.Add("/ </summary>");
 
 	var tables = db.Tables
-		.Where(t => !t.IsProviderSpecific)
+		.Where(t => !t.IsProviderSpecific && t.CatalogName != "sys")
 		.Select(t => new
 		{
 			t,
