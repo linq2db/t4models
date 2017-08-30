@@ -713,6 +713,15 @@ private int _counter = 0;
 
 string ToValidNameDefault(string name, bool mayRemoveUnderscore)
 {
+	var anyUpper = NormalizeNames && name.Any(char.IsUpper);
+	// Pluralization of upper case word adds lower case 's' at the end of the word, which breaks intention of anyLower, so lets account for more than one lower char
+	//var anyLower = NormalizeNames && name.Any(char.IsUpper);
+	var anyLower = NormalizeNames && name.Count(char.IsLower) > 1;
+
+	// All uppers to lowers for normalization purposes
+	if (anyUpper && !anyLower)
+		name = name.ToLower();
+
 	if (NormalizeNames && mayRemoveUnderscore && name.Contains("_"))
 	{
 		name = SplitAndJoin(name, "", '_');
