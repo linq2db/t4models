@@ -5,7 +5,7 @@
 <#@ include file="..\..\Templates\ObsoleteAttributes.ttinclude"                                                           #>
 <#@ include file="SqlServer.ttinclude"                                                                                    #>
 <#@ assembly name="$(SolutionDir)\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll" #>
-<#@ assembly name="$(SolutionDir)\packages\linq2db.1.8.3\lib\net40\linq2db.dll"                                           #>
+<#@ assembly name="$(SolutionDir)\packages\linq2db.1.10.0\lib\net40\linq2db.dll"                                           #>
 <#
 //	NamespaceName   = "DataContext";
 //	DataContextName = "NorthwindDB";
