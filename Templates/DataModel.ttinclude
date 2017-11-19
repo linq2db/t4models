@@ -455,9 +455,12 @@ void LoadMetadata(DataConnection dataConnection)
 
 	foreach (var t in Tables.Values)
 	{
+		var forbidden = KeyWords.Concat(new [] {t.TypeName});
+
 		var hasDuplicates = t.Columns.Values
 				.Select(c => c.MemberName)
 				.Concat(t.ForeignKeys.Values.Select(f => f.MemberName))
+				.Concat(forbidden)
 				.ToLookup(n => n)
 				.Any(g => g.Count() > 1);
 				
@@ -467,6 +470,7 @@ void LoadMetadata(DataConnection dataConnection)
 			{
 				var mayDuplicate = t.Columns.Values
 					.Select(c => c.MemberName)
+					.Concat(forbidden)
 					.Concat(t.ForeignKeys.Values.Where(f => f != fk).Select(f => f.MemberName));
 
 				fk.MemberName = SuggestNoDuplicate(mayDuplicate, fk.MemberName, "FK");
@@ -477,6 +481,7 @@ void LoadMetadata(DataConnection dataConnection)
 				var mayDuplicate = t.Columns.Values
 					.Where(c => c != col)
 					.Select(c => c.MemberName)
+					.Concat(forbidden)
 					.Concat(t.ForeignKeys.Values.Select(fk => fk.MemberName));
 
 				col.MemberName = SuggestNoDuplicate(mayDuplicate, col.MemberName, null);
