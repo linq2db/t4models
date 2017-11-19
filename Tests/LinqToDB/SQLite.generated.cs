@@ -47,29 +47,29 @@ namespace SQLiteDataContext
 	[Table("AllTypes")]
 	public partial class AllType
 	{
-		[Column(),                            PrimaryKey, Identity] public long      ID                       { get; set; } // integer
-		[Column(@"bigintDataType"),           Nullable            ] public long?     BigintDataType           { get; set; } // bigint
-		[Column(@"numericDataType"),          Nullable            ] public decimal?  NumericDataType          { get; set; } // numeric
-		[Column(@"bitDataType"),              Nullable            ] public bool?     BitDataType              { get; set; } // bit
-		[Column(@"smallintDataType"),         Nullable            ] public short?    SmallintDataType         { get; set; } // smallint
-		[Column(@"decimalDataType"),          Nullable            ] public decimal?  DecimalDataType          { get; set; } // decimal
-		[Column(@"intDataType"),              Nullable            ] public int?      IntDataType              { get; set; } // int
-		[Column(@"tinyintDataType"),          Nullable            ] public byte?     TinyintDataType          { get; set; } // tinyint
-		[Column(@"moneyDataType"),            Nullable            ] public decimal?  MoneyDataType            { get; set; } // money
-		[Column(@"floatDataType"),            Nullable            ] public double?   FloatDataType            { get; set; } // float
-		[Column(@"realDataType"),             Nullable            ] public double?   RealDataType             { get; set; } // real
-		[Column(@"datetimeDataType"),         Nullable            ] public DateTime? DatetimeDataType         { get; set; } // datetime
-		[Column(@"charDataType"),             Nullable            ] public char?     CharDataType             { get; set; } // char(1)
-		[Column(@"varcharDataType"),          Nullable            ] public string    VarcharDataType          { get; set; } // varchar(20)
-		[Column(@"textDataType"),             Nullable            ] public string    TextDataType             { get; set; } // text(max)
-		[Column(@"ncharDataType"),            Nullable            ] public string    NcharDataType            { get; set; } // char(20)
-		[Column(@"nvarcharDataType"),         Nullable            ] public string    NvarcharDataType         { get; set; } // nvarchar(20)
-		[Column(@"ntextDataType"),            Nullable            ] public string    NtextDataType            { get; set; } // ntext(max)
-		[Column(@"binaryDataType"),           Nullable            ] public byte[]    BinaryDataType           { get; set; } // binary
-		[Column(@"varbinaryDataType"),        Nullable            ] public byte[]    VarbinaryDataType        { get; set; } // varbinary
-		[Column(@"imageDataType"),            Nullable            ] public byte[]    ImageDataType            { get; set; } // image
-		[Column(@"uniqueidentifierDataType"), Nullable            ] public Guid?     UniqueidentifierDataType { get; set; } // uniqueidentifier
-		[Column(@"objectDataType"),           Nullable            ] public object    ObjectDataType           { get; set; } // object
+		[Column(),                           PrimaryKey, Identity] public long      ID                       { get; set; } // integer
+		[Column("bigintDataType"),           Nullable            ] public long?     BigintDataType           { get; set; } // bigint
+		[Column("numericDataType"),          Nullable            ] public decimal?  NumericDataType          { get; set; } // numeric
+		[Column("bitDataType"),              Nullable            ] public bool?     BitDataType              { get; set; } // bit
+		[Column("smallintDataType"),         Nullable            ] public short?    SmallintDataType         { get; set; } // smallint
+		[Column("decimalDataType"),          Nullable            ] public decimal?  DecimalDataType          { get; set; } // decimal
+		[Column("intDataType"),              Nullable            ] public int?      IntDataType              { get; set; } // int
+		[Column("tinyintDataType"),          Nullable            ] public byte?     TinyintDataType          { get; set; } // tinyint
+		[Column("moneyDataType"),            Nullable            ] public decimal?  MoneyDataType            { get; set; } // money
+		[Column("floatDataType"),            Nullable            ] public double?   FloatDataType            { get; set; } // float
+		[Column("realDataType"),             Nullable            ] public double?   RealDataType             { get; set; } // real
+		[Column("datetimeDataType"),         Nullable            ] public DateTime? DatetimeDataType         { get; set; } // datetime
+		[Column("charDataType"),             Nullable            ] public char?     CharDataType             { get; set; } // char(1)
+		[Column("varcharDataType"),          Nullable            ] public string    VarcharDataType          { get; set; } // varchar(20)
+		[Column("textDataType"),             Nullable            ] public string    TextDataType             { get; set; } // text(max)
+		[Column("ncharDataType"),            Nullable            ] public string    NcharDataType            { get; set; } // char(20)
+		[Column("nvarcharDataType"),         Nullable            ] public string    NvarcharDataType         { get; set; } // nvarchar(20)
+		[Column("ntextDataType"),            Nullable            ] public string    NtextDataType            { get; set; } // ntext(max)
+		[Column("binaryDataType"),           Nullable            ] public byte[]    BinaryDataType           { get; set; } // binary
+		[Column("varbinaryDataType"),        Nullable            ] public byte[]    VarbinaryDataType        { get; set; } // varbinary
+		[Column("imageDataType"),            Nullable            ] public byte[]    ImageDataType            { get; set; } // image
+		[Column("uniqueidentifierDataType"), Nullable            ] public Guid?     UniqueidentifierDataType { get; set; } // uniqueidentifier
+		[Column("objectDataType"),           Nullable            ] public object    ObjectDataType           { get; set; } // object
 	}
 
 	[Table("Child")]
