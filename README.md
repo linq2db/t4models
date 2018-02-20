@@ -22,6 +22,9 @@ This also will install needed linq2db packages:
 
 But **not** data provider packages (install them only if needed to compile your project, T4 models ships it's own data provider assemblies).
 
+### Issue reporting
+If you encounter any issues with model generator, use main [linq2db repository](https://github.com/linq2db/linq2db/issues) to report them.
+
 ### .Net Core specific 
 
 Because of .Net Core projects do not support NuGet content files all stuff is not copied into project's folder, so to run T4 templates you'll need:
